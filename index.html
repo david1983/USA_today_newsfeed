@@ -1,0 +1,110 @@
+<html ng-app="myapp">
+  <head>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  </head>
+  <body ng-controller="myctrl" ng-cloak>
+
+        <div class="frame" ng-class="{'closed' : !frameState}">
+      <div class="headerFrame" ng-click="frameState=false">
+        <i class="fa fa-times"></i>
+      </div>
+      <iframe id="myframe" src=""></iframe>
+    </div>
+    
+    
+    
+    <div class="header">   
+
+      <div class="logo"><strong>USA TODAY</strong></div>
+      <div class="menubtn" ng-click="menuState=false">
+        <i class="fa fa-bars"></i>
+      </div>
+      
+    </div>
+    
+    <div class="menu" ng-class="{'closed' : menuState}">
+      <div class="title cf" ng-click="menuState=true">
+        
+        <h2><i class="fa fa-arrow-left"></i></h2>
+      </div>
+      
+      <li class="subHeader blue" ng-click="menuNews=!menuNews">News</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuNews}">        
+        <div class="menuChoice" ng-repeat="n in news" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+      
+      <li class="subHeader red" ng-click="menuSports=!menuSports">Sports</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuSports}">        
+        <div class="menuChoice" ng-repeat="n in sports" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+      
+      <li class="subHeader purple" ng-click="menuLife=!menuLife">Life</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuLife}">        
+        <div class="menuChoice" ng-repeat="n in life" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+      
+      <li class="subHeader green" ng-click="menuMoney=!menuMoney">Money</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuMoney}">        
+        <div class="menuChoice" ng-repeat="n in money" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+      
+      <li class="subHeader orange" ng-click="menuTech=!menuTech">Tech</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuTech}">        
+        <div class="menuChoice" ng-repeat="n in tech" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+        
+      <li class="subHeader cyan" ng-click="menuTravel=!menuTravel">Travel</li>
+      <div class="subContent cf" ng-class="{'menuClosed':!menuTravel}">        
+        <div class="menuChoice" ng-repeat="n in travel" ng-click="loadFeed(n.link)">
+          {{n.title}}
+        </div>
+      </div>
+      
+    </div>
+    
+    <div class="content" data-scroll-to-top='feeds.length'>
+
+      <div ng-repeat="f in feeds">      
+	<div class="post" ng-click="showPost(f.link)">        
+		<a ><h4>{{f.title}}</h4></a>
+		<p ng-bind-html="f.content"></p>
+	</div>
+	
+  <div ng-if="$index==0">
+<script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=56664_87217_3'></script>
+ <script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=56664_87217_0&type=footer&size=728x90'></script>
+<script type='text/javascript' src='//eclkmpbn.com/adServe/banners?tid=56664_87217_6&type=shadowbox&size=300x250'></script>
+	</div>
+      </div>
+    </div>
+    
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56912611-2', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>

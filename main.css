@@ -1,0 +1,230 @@
+html,body{
+  margin:0;
+  overflow:hidden;
+  font-family:Helvetica;
+  font-family: 'Roboto', sans-serif;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.post{
+  border:1px solid lightgrey;
+  border-radius:5px;
+  margin:0.3em 0;
+  padding:0 0.5em
+}
+
+.content{
+  overflow:auto;
+  padding:0 0.5em;
+  margin-top:4em;
+  height:95%;
+}
+
+.header{
+  color:white;
+  padding:0.5em;
+  font-size:1.3em;
+  top:0;
+  position:fixed;
+  background:#333;
+  width:100%;  
+  height:5%;
+}
+
+.menubtn{
+  position:absolute;
+  right:2em;
+  top:0.4em;
+  cursor:pointer
+}
+
+.logo{
+  position:absolute;
+  left:1em;
+  top:0.2em;
+  font-size:1.4em;  
+}
+
+
+
+.menu{  
+  overflow:auto;
+  padding:0;
+  background:#333;
+  color:white; 
+  top:0;
+  position:absolute; 
+  width:100%;
+  height:100%;
+  z-index:99999;
+  opacity:1;
+  transition:0.5s all;
+  /* transform: translateX(-100%); */    
+}
+
+
+.closed{
+  opacity:0;
+  transform:translateX(-100%)
+}
+
+.title{
+  padding:0.5em 1em;
+  height:5%
+}
+.title h2{
+  text-align:right;
+  margin:0;
+  height:3%;
+  background:#333;
+  padding:0.5em 0.em 0.8em 1em;  
+}
+
+.blue{
+  background:#0af;
+}
+.blue:hover, .blue:active{
+  background:#0bf;
+}
+
+.red{
+  background:#b81800;
+}
+.red:hover, .red:active{
+  background:red;
+}
+
+.green{
+  background:#137f39;
+}
+.green:hover, .green:active{
+  background:#00a53c;
+}
+
+.purple{
+  background:#741784;
+}
+
+.purple:hover, .purple:active{
+  background:#9600b4;
+}
+
+.orange{
+  background:#c15709;
+}
+
+.orange:hover, .orange:active{
+  background:#fa6600;
+}
+
+.cyan{
+  background:#119e9e;
+}
+
+.cyan:hover, .cyan:active{
+  background:#00c3c3;
+}
+
+
+
+
+.subHeader{
+  list-style-type:none;
+  padding:1em;
+  
+}
+
+
+.menuChoice{  
+  padding:1em; 
+  background:#222
+}
+
+.menuChoice:hover{
+  background:#555
+}
+
+.subContent{
+  overflow:hidden;  
+  /* min-height:500px; */
+  max-height:300px;
+  transition:1s all;
+}
+.menuClosed{
+  overflow:hidden;
+  max-height:0;
+  
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+/**
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.cf {
+    *zoom: 1;
+}
+
+.frame{
+  position:fixed;
+  background:white;
+  top:0;
+  height:0;
+  width:100%;
+  height:100%;  
+  z-index:9;
+  transition:0.5s all;
+}
+
+
+.headerFrame{
+  position:fixed;
+  height:3%;
+  width:100%;
+  background:#333;
+  color:white;
+  padding:1em;
+}
+
+#myframe{
+  margin-top:-7%;
+  width:100%;
+  height:97%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
